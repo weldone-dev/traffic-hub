@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-white: #FFFFFF;
+  --color-primary-blue: #2563EB;
+  --color-dark-slate: #263C5C;
+  --color-emerald: #059669;
+  --color-steel-blue: #344762;
+  --color-navy: #1C2C43;
+  --color-charcoal: #111827;
+  --color-bg: linear-gradient(180deg, #111827 9.79%, #141F35 100%);
+  --font-roboto: var(--font-roboto), sans-serif;
+
+}
+
+@layer base {
+  html, body {
+    min-height: 100vh;
+    color: var(--color-white);
+    font-family: var(--font-roboto), sans-serif;
+    background: var(--color-bg);
+  }
+}
