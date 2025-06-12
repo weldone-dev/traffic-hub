@@ -23,16 +23,16 @@
 }
 
 @layer components {
-  .title {
-    @apply text-[72px] font-bold font-roboto leading-[1];
+  .text_title {
+    @apply text-[72px] font-bold font-roboto leading-[1.167];
   }
   
-  .title_second {
-    @apply text-[48px] font-bold font-roboto leading-[1];
+  .text_title-second {
+    @apply text-[48px] font-bold font-roboto leading-[1.167];
   }
   
-  .subtitle {
-    @apply text-[32px] font-normal font-roboto leading-[1];
+  .text_subtitle {
+    @apply text-[32px] font-normal font-roboto leading-[1.167];
   }
   
   .text_base {
@@ -40,15 +40,15 @@
   }
   
   .text_accent {
-    @apply text-[24px] font-medium font-roboto leading-[1];
+    @apply text-[24px] font-medium font-roboto leading-[1.167];
   }
   
   .text_extra {
-    @apply text-[16px] font-medium font-roboto leading-[1];
+    @apply text-[16px] font-medium font-roboto leading-[1.167];
   }
   
   .text_button {
-    @apply text-[24px] font-bold font-roboto leading-[1];
+    @apply text-[24px] font-bold font-roboto leading-[1.167];
   }
 
   .card{

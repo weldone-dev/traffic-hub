@@ -1,6 +1,7 @@
 import type {ReactNode} from "react";
 import type {Metadata} from "next";
 import {roboto} from "@/shared/fonts";
+import {Footer, Header} from "@/widgets";
 import "./globals.css";
 
 
@@ -64,7 +65,13 @@ export default function RootLayout(
     return (
         <html lang="ru">
         <body className={`${roboto.variable} antialiased`}>
-        {children}
+        <div className={"flex flex-col min-h-screen"}>
+            <Header/>
+            <div className={"flex-grow"}>
+                {children}
+            </div>
+            <Footer/>
+        </div>
         </body>
         </html>
     );
