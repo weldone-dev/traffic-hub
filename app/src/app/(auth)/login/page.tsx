@@ -6,8 +6,8 @@ export default function PageLogin () {
     <div>
       <FieldInput
         label='Email'
-        placeholder='your@email.com'
-        // error="Ошибка"
+        placeholder='your@email.com'   
+        error="Ошибка"
         startContent={<EmailIcon />}
         className='mb-4'
       />

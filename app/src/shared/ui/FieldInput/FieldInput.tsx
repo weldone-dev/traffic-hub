@@ -5,9 +5,9 @@ import clsx from 'clsx'
 
 interface FieldInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
-  error?: string
   className?: string
   startContent?: ReactNode
+  error: string;
   endContent?: ReactNode
 }
 
@@ -15,8 +15,8 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
   (
     {
       label,
-      error,
       className,
+      error,
       startContent,
       endContent,
       onFocus,
@@ -26,6 +26,7 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
     ref
   ) => {
     const [isFocused, setIsFocused] = useState(false)
+   
 
     const containerClasses = twMerge(
       clsx(
@@ -55,7 +56,7 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
       <div className='w-full'>
         <div className='flex flex-wrap items-baseline'>
           {label && (
-            <label className='block mb-2 text_base font-medium opacity-60'>
+            <label className='block mb-2 text_base font-medium text-white/60'>
               {label}
             </label>
           )}
@@ -74,9 +75,12 @@ export const FieldInput = forwardRef<HTMLInputElement, FieldInputProps>(
 
           <input
             ref={ref}
-            className={clsx('w-full bg-transparent outline-none text_button text-white placeholder:text-gray-400', {
-              'cursor-not-allowed': props.disabled
-            })}
+            className={clsx(
+              'w-full bg-transparent outline-none text_button text-white placeholder:text-gray-400',
+              {
+                'cursor-not-allowed': props.disabled
+              }
+            )}
             onFocus={handleFocus}
             onBlur={handleBlur}
             {...props}
