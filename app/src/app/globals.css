@@ -9,6 +9,7 @@
   --color-navy: #1C2C43;
   --color-charcoal: #111827;
   --color-bg: linear-gradient(180deg, #111827 9.79%, #141F35 100%);
+  --color-red: #FF5959;
   --font-roboto: var(--font-roboto), sans-serif;
 }
 
