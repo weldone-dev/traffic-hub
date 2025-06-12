@@ -1,8 +1,8 @@
-import {SearchPage} from "@/views/SupportPage";
+import {SupportPage} from "@/views/SupportPage";
 
 
 export default async function PageSupport() {
     return (
-        <SearchPage/>
+        <SupportPage/>
     );
 }

@@ -1,4 +1,4 @@
-import {SearchPage} from "@/views/SupportPage";
+import {SearchPage} from "@/views/SearchPage";
 
 
 export default async function PageSearch() {

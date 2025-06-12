@@ -23,44 +23,35 @@
 
 @layer components {
   .title {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 700;
-    font-size: 72px;
+    @apply text-[72px] font-bold font-roboto leading-[1];
   }
   
   .title_second {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 700;
-    font-size: 48px;
+    @apply text-[48px] font-bold font-roboto leading-[1];
   }
   
   .subtitle {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 400;
-    font-size: 32px;
+    @apply text-[32px] font-normal font-roboto leading-[1];
   }
   
   .text_base {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    @apply text-[24px] font-normal font-roboto leading-[1.167];
   }
   
   .text_accent {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 500;
-    font-size: 24px;
+    @apply text-[24px] font-medium font-roboto leading-[1];
   }
   
   .text_extra {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+    @apply text-[16px] font-medium font-roboto leading-[1];
   }
   
   .text_button {
-    font-family: var(--font-roboto), sans-serif;
-    font-weight: 700;
-    font-size: 24px;
+    @apply text-[24px] font-bold font-roboto leading-[1];
+  }
+
+  .card{
+    background-color: var(--color-navy);
+    border-radius: 16px;
   }
 }
