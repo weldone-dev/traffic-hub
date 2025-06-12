@@ -10,7 +10,6 @@
   --color-charcoal: #111827;
   --color-bg: linear-gradient(180deg, #111827 9.79%, #141F35 100%);
   --font-roboto: var(--font-roboto), sans-serif;
-
 }
 
 @layer base {
@@ -19,5 +18,49 @@
     color: var(--color-white);
     font-family: var(--font-roboto), sans-serif;
     background: var(--color-bg);
+  }
+}
+
+@layer components {
+  .title {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+  }
+  
+  .title_second {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  
+  .subtitle {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+  }
+  
+  .text_base {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  
+  .text_accent {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  .text_extra {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .text_button {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-size: 24px;
   }
 }
