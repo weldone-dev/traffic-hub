@@ -9,9 +9,9 @@ export const Header: FC = () => {
         <header className={"px-[80px] max-w-[1920px]"}>
             <nav aria-label="Main navigation" className={"py-[50px]"}>
                 <div className="flex items-center justify-between px-4 py-2">
-                    <a href="/" className="text_base text-white ">
+                    <Link href="/" className="text_base text-white">
                         <LogoIcon/>
-                    </a>
+                    </Link>
                     <ul className="flex gap-[36px] items-center ml-auto">
                         {([
                             {link: "/support", text: "Поддержка"},
