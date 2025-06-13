@@ -55,7 +55,7 @@ export default function LoginPage () {
           Добро пожаловать
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-[32px]'>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-[36px]'>
       
           <FieldInput
             label='Логин'
