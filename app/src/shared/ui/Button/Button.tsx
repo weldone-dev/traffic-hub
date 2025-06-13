@@ -30,37 +30,44 @@ export function Button<E extends ElementType = "button">(props: ButtonProps<E>) 
     } = props;
 
     const [pressed, setPressed] = useState(false);
-    const Tag = as || "button";
+    const Tag = (as || "button");
 
     const baseClasses = clsx(
-        "px-[20px] py-[22px] rounded-[15px] flex justify-center items-center gap-[10px] text-white text-[24px] font-bold leading-[1]",
+        "px-[20px] py-[22px] rounded-[15px] flex justify-center items-center gap-[10px] text_button",
         "tracking-[0.029px] cursor-pointer transition-all duration-200 hover:brightness-80 disabled:brightness-50 disabled:cursor-not-allowed"
     );
 
     const colorClasses = {
         "primary-blue": "bg-[var(--color-primary-blue)]",
         "dark-slate": "bg-[var(--color-dark-slate)]",
-        "emerald": "bg-[var(--color-emerald)]",
+        "emerald": "bg-[var(--color-emerald)]"
     }[color];
 
-    const visualEffect = pressed ? "scale-[0.97]" : "";
+    const visualEffect = (pressed ? "scale-[0.97]" : "");
     const combinedClasses = twMerge(baseClasses, colorClasses, visualEffect, className);
 
     const handleClick = (e: MouseEvent<HTMLElement>) => {
         const disabled = (Tag === "button" ? props.disabled : false);
         if (disabled) return;
         setPressed(true);
-        setTimeout(() => setPressed(false), 100);
+        setTimeout(
+            () => setPressed(false),
+            100
+        );
         onClick?.(e);
     };
-    const currentProps = Tag === "button" ? {
-        ...otherProps,
-        disabled: props.disabled,
-        onClick: handleClick
-    } : {
-        ...otherProps,
-        onClick: handleClick
-    };
+    const currentProps = (
+        Tag === "button"
+            ? {
+                ...otherProps,
+                disabled: props.disabled,
+                onClick: handleClick
+            }
+            : {
+                ...otherProps,
+                onClick: handleClick
+            }
+    );
 
     return (
         <Tag className={combinedClasses} {...currentProps}>

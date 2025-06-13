@@ -19,5 +19,4 @@ export const DocumentIcon: FC<IProps> = ({width, height, size, ...otherProps}) =
             fill="currentColor"
         />
     </svg>
-
 );

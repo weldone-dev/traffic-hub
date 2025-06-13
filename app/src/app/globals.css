@@ -23,6 +23,9 @@
 }
 
 @layer components {
+  .box {
+    @apply w-full max-w-[1920px] mx-auto px-[80px];
+  }
   .text_title {
     @apply text-[72px] font-bold font-roboto leading-[1.167];
   }

@@ -6,9 +6,9 @@ import {Button} from "@/shared/ui";
 
 export const Header: FC = () => {
     return (
-        <header className={"px-[80px] max-w-[1920px]"}>
-            <nav aria-label="Main navigation" className={"py-[50px]"}>
-                <div className="flex items-center justify-between px-4 py-2">
+        <header className={"box"}>
+            <nav aria-label="Main navigation" className={"py-[29px]"}>
+                <div className="flex items-center justify-between">
                     <Link href="/" className="text_base text-white">
                         <LogoIcon/>
                     </Link>

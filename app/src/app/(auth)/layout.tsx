@@ -1,4 +1,4 @@
-import {type ReactNode} from "react";
+import type {ReactNode} from "react";
 
 
 export default function AuthLayout(
@@ -7,8 +7,8 @@ export default function AuthLayout(
     }>
 ) {
     return (
-       <div>
-           {children}
-       </div>
+        <div>
+            {children}
+        </div>
     );
 }

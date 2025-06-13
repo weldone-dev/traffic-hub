@@ -37,7 +37,5 @@ export const NewUserIcon: FC<IProps> = ({width, height, size, ...otherProps}) =>
             d="M12 5.25C12 6.90685 10.6569 8.25 9.00001 8.25C7.34316 8.25 6.00001 6.90685 6.00001 5.25C6.00001 3.59315 7.34316 2.25 9.00001 2.25C10.6569 2.25 12 3.59315 12 5.25Z"
             fill="currentColor"
         />
-
     </svg>
-
 );
