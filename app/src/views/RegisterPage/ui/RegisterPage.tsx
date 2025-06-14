@@ -56,7 +56,7 @@ export const RegisterPage = () => {
                     Создайте аккаунт
                 </h1>
                 {serverError && (
-                    <p className="mb-[16px] text-red-500">
+                    <p className="mb-[16px] text-error">
                         {serverError}
                     </p>
                 )}

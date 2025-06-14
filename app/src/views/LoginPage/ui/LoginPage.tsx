@@ -81,7 +81,7 @@ export const LoginPage = () => {
                         </div>
 
                         {serverError && (
-                            <p className="text-sm text-red-500 text-center">{serverError}</p>
+                            <p className="text-sm text-error text-center">{serverError}</p>
                         )}
 
                         <Button
