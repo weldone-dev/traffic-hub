@@ -67,7 +67,7 @@ export const FieldInput = forwardRef<HTMLInputElement, IProps>(
                     )}
 
                     {error && (
-                        <p className="text_base ml-[10px] text-red transition-all duration-200">
+                        <p className="text_base ml-[10px] text-error transition-all duration-200">
                             {error}
                         </p>
                     )}

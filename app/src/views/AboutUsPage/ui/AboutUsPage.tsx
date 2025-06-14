@@ -31,7 +31,7 @@ export const AboutUsPage = () => {
                     <Button as={Link} href={"/"} download={true} startContent={<DownloadIcon/>}>
                         Скачать Traffic Analyzer
                     </Button>
-                    <Button as={Link} href={"/"} download={true} startContent={<DocumentIcon/>}>
+                    <Button as={Link} href={"/"} color={"dark-slate"} download={true} startContent={<DocumentIcon/>}>
                         Скачать инструкцию
                     </Button>
                 </div>

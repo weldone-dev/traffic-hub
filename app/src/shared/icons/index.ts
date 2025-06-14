@@ -10,3 +10,7 @@ export {EyeOffIcon} from "./EyeOffIcon";
 export {PersonIcon} from "./PersonIcon";
 export {EnterIcon} from "./EnterIcon";
 export {DownloadIcon} from "./DownloadIcon";
+export {AnalyticsIcon} from "./AnalyticsIcon";
+export {SearchIcon} from "./SearchIcon";
+export {LoadingIcon} from "./LoadingIcon";
+export {FileIcon} from "./FileIcon";
