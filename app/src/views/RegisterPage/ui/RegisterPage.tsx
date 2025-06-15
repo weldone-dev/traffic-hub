@@ -22,33 +22,31 @@ export const RegisterPage = () => {
     const onSubmit = async (data: IRegisterFormValues) => {
         setServerError(null);
         try {
+            // Заменить на существующий вызов API!
             const response = await fetch("/api/register", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data)
             });
-            if (!response.ok) {
-
-                let errorMessage = "Ошибка сервера";
-                try {
-                    const result = await response.json();
-                    errorMessage = result.message || result.error || errorMessage;
-                } catch {
-                    const text = await response.text();
-                    errorMessage = text || errorMessage;
-                }
-                setServerError(errorMessage)
-            } else {
-                // Успех: перенаправляем на /
-                router.push("/");
+            if (response.ok) {
+                return router.push("/");
             }
+            let errorMessage = "Ошибка сервера";
+            try {
+                const result = await response.json();
+                errorMessage = result.message || result.error || errorMessage;
+            } catch {
+                const text = await response.text();
+                errorMessage = text || errorMessage;
+            }
+            setServerError(errorMessage)
         } catch (error: any) {
             setServerError(error.message || "Ошибка при отправке запроса");
         }
     }
 
     return (
-        <div className="flex items-center justify-center">
+        <article className="flex items-center justify-center">
             <div
                 className="card flex w-full max-w-[846px] flex-col items-center justify-center my-[100px] p-[36px] gap-[36px]"
             >
@@ -142,6 +140,6 @@ export const RegisterPage = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }

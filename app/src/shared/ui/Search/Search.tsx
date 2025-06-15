@@ -4,13 +4,15 @@ import {
     type FC,
     type InputHTMLAttributes,
     type KeyboardEvent,
+    type ChangeEvent,
     forwardRef,
     useState,
-    type ChangeEvent
+    useLayoutEffect
 } from "react";
 import clsx from "clsx";
-import { SearchIcon } from "@/shared/icons";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
+import {SearchIcon} from "@/shared/icons";
+import {twMerge} from "tailwind-merge";
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
     value?: string;
@@ -23,14 +25,21 @@ export const Search: FC<IProps> = forwardRef<HTMLInputElement, IProps>((
     const {
         className,
         placeholder = "Поиск существующих трасс",
-        value = "",
+        value,
         onChange,
+        onClick,
         onKeyDown,
         ...restProps
     } = props;
 
     const router = useRouter();
-    const [inputValue, setInputValue] = useState(value);
+    const [inputValue, setInputValue] = useState(value || "");
+
+    useLayoutEffect(() => {
+        if (typeof value !== "undefined") {
+            setInputValue(value);
+        }
+    }, [value]);
 
     const handleSearch = () => {
         const value = inputValue.trim();
@@ -53,10 +62,10 @@ export const Search: FC<IProps> = forwardRef<HTMLInputElement, IProps>((
     };
 
     return (
-        <article className={"relative flex items-center bg-navy rounded-[16px] py-[24px] pl-[78px] pr-[20px]"}>
+        <article className={twMerge("relative flex items-center bg-navy rounded-[16px] py-[24px] pl-[78px] pr-[20px]", className)}>
             <div
                 className="absolute left-[20px] cursor-pointer"
-                onClick={handleSearch}
+                onClick={onClick || handleSearch}
             >
                 <SearchIcon/>
             </div>

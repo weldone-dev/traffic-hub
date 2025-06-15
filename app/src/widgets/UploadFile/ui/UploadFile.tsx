@@ -3,7 +3,7 @@ import {type FC, type DragEvent, useCallback, useState} from "react";
 import clsx from "clsx";
 import {observer} from "mobx-react-lite";
 import {useTraceAnalysis} from "@/entities/stores";
-import {apiUpload} from "../model/api/upload";
+import {apiUpload} from "../model/api";
 import type {IUploadState} from "../helpers/types";
 import {InitialState} from "./InitialState";
 import {LoadingState} from "./LoadingState";

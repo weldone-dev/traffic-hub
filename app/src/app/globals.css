@@ -54,6 +54,9 @@
   .text_button {
     @apply text-[24px] font-bold font-roboto leading-[1.167];
   }
+  .text_filter {
+    @apply text-[12px] font-normal font-roboto leading-[1.167];
+  }
 
   .card{
     background-color: var(--color-navy);
