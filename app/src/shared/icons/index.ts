@@ -14,3 +14,4 @@ export {AnalyticsIcon} from "./AnalyticsIcon";
 export {SearchIcon} from "./SearchIcon";
 export {LoadingIcon} from "./LoadingIcon";
 export {FileIcon} from "./FileIcon";
+export {PlusIcon} from "./PlusIcon";

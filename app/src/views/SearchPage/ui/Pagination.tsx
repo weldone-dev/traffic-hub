@@ -8,13 +8,9 @@ interface IProps {
 }
 const getPages = (currentPage: number, totalPages: number): (number | string)[] => {
     const pages: (number | string)[] = [];
-
-    // Всегда включаем первую и вторую
     pages.push(1);
     if (totalPages >= 2) pages.push(2);
-
     if (currentPage <= 3) {
-        // Показываем первые 5 страниц
         for (let i = 3; i <= 5 && i < totalPages - 2; i++) {
             pages.push(i);
         }
@@ -22,13 +18,11 @@ const getPages = (currentPage: number, totalPages: number): (number | string)[] 
             pages.push("…");
         }
     } else if (currentPage >= totalPages - 2) {
-        // Конец списка
         pages.push("…");
         for (let i = totalPages - 4; i < totalPages - 2; i++) {
             if (i > 2) pages.push(i);
         }
     } else {
-        // Середина
         pages.push("…");
         pages.push(currentPage - 1);
         pages.push(currentPage);
@@ -36,11 +30,9 @@ const getPages = (currentPage: number, totalPages: number): (number | string)[] 
         pages.push("…");
     }
 
-    // Последние две страницы
     if (totalPages > 4) pages.push(totalPages - 1);
     if (totalPages > 3) pages.push(totalPages);
 
-    // Убираем дубликаты и сортируем
     return [...new Set(pages.filter(p => typeof p === 'string' || (p >= 1 && p <= totalPages)))];
 };
 
